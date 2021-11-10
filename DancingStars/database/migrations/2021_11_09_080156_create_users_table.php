@@ -14,15 +14,15 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->id('user_id');
+            $table->string('user_name');
+            $table->string('user_password')->unique();
+            $table->timestamp('user_email')->nullable();
+            $table->bigInteger('role_id')->unsigned()->index()->nullable();
             $table->timestamps();
-        });
-    }
+            $table->foreign('role_id')->references('role_id')->on('roles');
+    });
+}
 
     /**
      * Reverse the migrations.

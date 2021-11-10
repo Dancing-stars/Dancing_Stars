@@ -14,7 +14,7 @@ class CreateCriterionsTable extends Migration
     public function up()
     {
         Schema::create('criterions', function (Blueprint $table) {
-            $table->id();
+            $table->id('criterion_id');
             $table->string('criterion_name');
             $table->timestamps();
         });
