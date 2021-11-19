@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\controllers\HomePageController;
+use App\Http\Controllers\BeforeEvaluationController;
+use App\Http\Controllers\EvaluationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ Auth::routes();
+
+ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// });
+
+Route::get('/',[HomePageController::class , 'index']);
+
+Route::get('/beforeevaluation', [BeforeEvaluationController::class, 'index'])->name('beforeevaluation');  
+Route::get('/evaluation', [EvaluationController::class, 'index'])->name('evaluation');
