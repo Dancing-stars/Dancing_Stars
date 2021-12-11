@@ -15,7 +15,7 @@ class CreateCompetitionsTable extends Migration
     {
         Schema::create('competitions', function (Blueprint $table) {
             $table->id('competition_id');
-            $table->string('competiotion_name');
+            $table->string('competition_name');
             $table->bigInteger('type')->unsigned()->index()->nullable();
             $table->date('start_date');
             $table->date('end_date');

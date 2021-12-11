@@ -10,16 +10,19 @@ class preEvaluationController extends Controller
 {
     public function index(){
 
+    $now = date('Y-m-d');
+
+    $competitions = DB::table('competitions')
+    ->select('competition_name','competition_id')
+    ->where([
+    ['start_date', '<', $now],
+    ['end_date', '>=', $now],
+	])->get();
     
-    $competitions = DB::table('competitions')->select('competiotion_name','competition_id')->get();
+
     return view('preEvaluation',['competitions'=>$competitions]);
     
-   
    }
 
  }
-
-
-// where clause
-// start date po-malka ot tekushtata 
-// end date po-golqma ot tekushtata 
+ //na tazi stranica pokazvame tekushtite konkursi

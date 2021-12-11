@@ -22,4 +22,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/preEvaluation', [App\Http\Controllers\preEvaluationController::class, 'index'])->name('preEvaluation');
-Route::get('/evaluation/{id}', [App\Http\Controllers\EvaluationController::class, 'index'])->name('evaluation');
+Route::get('/evaluation/{competition_id}/{dancer_id?}', [App\Http\Controllers\EvaluationController::class, 'index'])->name('evaluation');
+Auth::routes();
+
+Route::get('/evaluation/{competition_id}/{dancer_id?}/create', [App\Http\Controllers\EvaluationController::class, 'create'])->name('createEvaluation');
