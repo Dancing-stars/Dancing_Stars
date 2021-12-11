@@ -1,0 +1,59 @@
+body{
+	background-image: url("/css/img/19fdb5ce8eb3fcec6400b57838b2aa39 (1).jpg")
+
+}
+
+h1 ,h2{
+	color: #9BCDFF;
+	text-align: center;
+	font-family: Fantasy;
+}
+
+button{
+	margin-left:31px;
+	margin-top: 5px;
+	background-color: black;
+	font-family: Cursive;
+}
+
+
+div{
+	border-style: solid;
+	background-color: black;
+	border-bottom: 2px;
+}
+
+.container{
+	border-style: solid;
+	background-color: black;
+	border-bottom: 2px;
+}
+
+p{
+	color: #9BCDFF;
+	font-family: Serif;
+}
+.table{
+	border-style: solid;
+	margin-left: 365px;
+	width:50%;
+	border-top: 1000px;
+	color: #9BCDFF;
+	margin-top: 100px;
+	border-color:  #9BCDFF;
+
+}
+.secondWallpaper{
+	background-image: url("/css/img/VAinGr (1).jpg")
+
+}
+
+.thirdBackground{
+	background-image: url("/css/img/wallpaper.jpg")
+}
+
+.form{	
+
+
+  margin-left: 360px;
+}
